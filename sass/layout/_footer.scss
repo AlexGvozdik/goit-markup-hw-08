@@ -1,0 +1,55 @@
+.footer {
+    background-color: var(--hero-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+
+
+.location {
+    margin-right: 70px;
+}
+
+.box-logo {
+    margin-bottom: 20px;
+}
+
+
+
+
+.footer__item {
+    &:not(:last-child) {
+    margin-bottom: 9px;
+    }
+}
+
+.footer__info {
+    color: rgba(255, 255, 255, 0.6);
+
+    @include font(14px, 400, 24px);
+}
+
+.footer__city {
+    display: block;
+    width: 231px;
+
+    color: var(--primary-background-color);
+
+}
+
+.join {
+    margin-right: 93px;
+}
+
+.join__subtitle {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+

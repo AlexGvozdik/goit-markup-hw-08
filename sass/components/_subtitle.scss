@@ -1,0 +1,8 @@
+.subtitle {
+    @include font();
+    
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+
+    color: var(--secondary-text-color);
+}

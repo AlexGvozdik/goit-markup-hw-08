@@ -1,0 +1,16 @@
+.logo {
+    color: #000000;
+    font-family: var(--secondary-fonts);
+
+    @include font(26px, 700, 31px);
+
+    &--whited {
+        color: var(--secondary-text-color);
+    }
+
+    &__web {
+        color: var(--accent-text-color)
+    }
+
+}
+
