@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homework-seventh</title>
+    <title>homework-eighth</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -25,13 +25,13 @@
 
 <body class="page">
     <!-- Прелоадер нашей страницы -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="content">
             <div class="content__circle  content__circle--first"></div>
             <div class="content__circle  content__circle--second"></div>
             <div class="content__circle  content__circle--third"></div>
         </div>
-    </div>
+    </div> -->
     <!-- Наш Хэдэр -->
     <header class="header">
         <!-- навигация  -->
@@ -53,27 +53,50 @@
                     </li>
                 </ul>
             </nav>
+            <button type="button" class="drop-btn" data-menu-button>
+                <svg class="drop-btn__icon" width="40" height="40">
+                    <use href="./img/svg-icon/sprite.svg#icon-drop-menu"></use>
+                </svg>
+            </button>
             <ul class="header__list-contacts list">
                 <li class="header__item-contacts"><a href="mailto:info@devstudio.com" lang="en"
                         class="header__anchor header__anchor--grayer link">
-                        <svg class="header__icon" width="16px" height="12px">
+                        <svg class="header__icon" width="16" height="12">
                             <use href="./img/svg-icon/sprite.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
                 <li class="header__item-contacts">
                     <a href="tel:+380961111111" class="header__anchor header__anchor--grayer link">
-                        <svg class="header__icon" width="10px" height="16px">
+                        <svg class="header__icon" width="10" height="16">
                             <use href="./img/svg-icon/sprite.svg#icon-cell"></use>
                         </svg>
                         +38 096 111 11 11</a></li>
+            </ul>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                <svg class="mobile-menu__icon-cross" width="40" height="40">
+                    <use href="./img/svg-icon/sprite.svg#icon-drop-cross"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu__nav list">
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link active-page link">Студия</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link link">Портфолио</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="mobile-menu__link link">Контакты</a>
+                </li>
             </ul>
         </div>
     </header>
     <!-- Уникальная инфа -->
     <main>
         <!--Секция с баннером  -->
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="hero__container container">
                 <h1 class="hero__title">
                     ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
@@ -131,9 +154,9 @@
                         </div>
                     </div>
             </div>
-        </section>
+        </section> -->
         <!-- Секция наши особенности  -->
-        <section class="features">
+        <!-- <section class="features">
             <div class="features__container container">
                 <h2 class="title-hidden">
                     Наши особенности
@@ -212,31 +235,43 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- Секция чем мы занимемся -->
-        <section class="duties">
+        <!-- <section class="duties">
             <div class="duties__container container">
                 <h2 class="title">
                     Чем мы занимаемся
                 </h2>
                 <ul class="grid list">
                     <li class="duties__item item">
-                        <img src="./img/serveces/typing.jpg" alt="Набор кода" class="duties___photo">
+                        <picture>
+                            <source srcset="./img/serveces/desktop/typing-desktop.webp 1x, ./img/serveces/desktop/2x/typing-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                            <source srcset="./img/serveces/desktop/typing-desktop.jpg 1x, ./img/serveces/desktop/2x/typing-desktop@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./img/serveces/desktop/typing-desktop.jpg" alt="Набор кода" class="duties___photo">
+                        </picture>
                         <p class="duties__subtitle-typing subtitle">Десктопные приложения</p>
                     </li>
                     <li class="duties__item item">
-                        <img src="./img/serveces/scanning.jpg" alt="Сканирование" class="duties___photo">
+                        <picture>
+                            <source srcset="./img/serveces/desktop/scanning-desktop.webp 1x, ./img/serveces/desktop/2x/scanning-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                            <source srcset="./img/serveces/desktop/scanning-desktop.jpg 1x, ./img/serveces/desktop/2x/scanning-desktop@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./img/serveces/desktop/scanning-desktop.jpg" alt="Сканирование" class="duties___photo">
+                        </picture>
                         <p class="duties__subtitle-scanning subtitle">Мобильные приложения</p>
                     </li>
                     <li class="duties__item item">
-                        <img src="./img/serveces/colour-choosing.jpg" alt="Выбор цвета" class="duties___photo">
+                        <picture>
+                            <source srcset="./img/serveces/desktop/colour-choosing-desktop.webp 1x, ./img/serveces/desktop/2x/colour-choosing-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+                            <source srcset="./img/serveces/desktop/colour-choosing-desktop.jpg 1x, ./img/serveces/desktop/2x/colour-choosing-desktop@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./img/serveces/desktop/colour-choosing-desktop.jpg" alt="Выбор цвета" class="duties___photo">
+                        </picture>
                         <p class="duties__subtitle-choosing subtitle">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- Секция наш персонал -->
-        <section class="staff">
+        <!-- <section class="staff">
             <div class="staff__container container">
                 <h2 class="title">
                     Наша команда
@@ -244,8 +279,22 @@
                 <ul class="grid list">
                     <li class="staff__item item">
                         <article class="human">
-                            <img src="./img/our-team/Igor.jpg" lang="en" alt="Фото нашего Product Designer"
-                            class="human__image">
+                            <picture>
+                                <source srcset="./img/our-team/desktop/Igor-desktop.webp 1x, ./img/our-team/desktop/2x/Igor-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+
+                                <source srcset="./img/our-team/desktop/Igor-desktop.jpg 1x, ./img/our-team/desktop/2x/Igor-desktop@2x.jpg 2x" media="(min-width:1200px)">
+
+                                <source srcset="./img/our-team/tablet/Igor-tablet.webp 1x, ./img/our-team/tablet/2x/Igor-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+
+                                <source srcset="./img/our-team/tablet/Igor-tablet.jpg 1x, ./img/our-team/tablet/2x/Igor-tablet@2x.jpg 2x" media="(min-width:768px)">
+
+                                <source srcset="./img/our-team/mobile/Igor-mobile.webp 1x, ./img/our-team/mobile/2x/Igor-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+
+                                <source srcset="./img/our-team/mobile/Igor-mobile.jpg 1x, ./img/our-team/mobile/2x/Igor-mobile@2x.jpg 2x" media="(min-width:320px)">
+
+                                <img src="./img/our-team/mobile/Igor-mobile.jpg" lang="en" alt="Фото нашего Product Designer"
+                                class="human__image">
+                            </picture>
                             <div class="human__info">
                                 <h3 class="human__title">
                                     Игорь Демьяненко
@@ -279,8 +328,22 @@
                     
                     <li class="staff__item item">
                         <article class="human">
-                            <img src="./img/our-team/Olga.jpg" lang="en" alt="Фото нашего  Frontend Developer"
+                            <picture>
+                                <source srcset="./img/our-team/desktop/Olga-desktop.webp 1x, ./img/our-team/desktop/2x/Olga-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+
+                                <source srcset="./img/our-team/desktop/Olga-desktop.jpg 1x, ./img/our-team/desktop/2x/Olga-desktop@2x.jpg 2x" media="(min-width:1200px)">
+
+                                <source srcset="./img/our-team/tablet/Olga-tablet.webp 1x, ./img/our-team/tablet/2x/Olga-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+
+                                <source srcset="./img/our-team/tablet/Olga-tablet.jpg 1x, ./img/our-team/tablet/2x/Olga-tablet@2x.jpg 2x" media="(min-width:768px)">
+
+                                <source srcset="./img/our-team/mobile/Olga-mobile.webp 1x, ./img/our-team/mobile/2x/Olga-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+
+                                <source srcset="./img/our-team/mobile/Olga-mobile.jpg 1x, ./img/our-team/mobile/2x/Olga-mobile@2x.jpg 2x" media="(min-width:320px)">
+
+                                <img src="./img/our-team/mobile/Olga-mobile.jpg" lang="en" alt="Фото нашего  Frontend Developer"
                             class="human__image">
+                            </picture>
                             <div class="human__info">
                                 <h3 class="human__title">
                                     Ольга Репина
@@ -314,8 +377,22 @@
 
                     <li class="staff__item item">
                         <article class="human">
-                            <img src="./img/our-team/Nikolas.jpg" lang="en" alt="Фото нашего Marketing"
+                            <picture>
+                                <source srcset="./img/our-team/desktop/Nikolas-desktop.webp 1x, ./img/our-team/desktop/2x/Nikolas-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+
+                                <source srcset="./img/our-team/desktop/Nikolas-desktop.jpg 1x, ./img/our-team/desktop/2x/Nikolas-desktop@2x.jpg 2x" media="(min-width:1200px)">
+
+                                <source srcset="./img/our-team/tablet/Nikolas-tablet.webp 1x, ./img/our-team/tablet/2x/Nikolas-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+
+                                <source srcset="./img/our-team/tablet/Nikolas-tablet.jpg 1x, ./img/our-team/tablet/2x/Nikolas-tablet@2x.jpg 2x" media="(min-width:768px)">
+
+                                <source srcset="./img/our-team/mobile/Nikolas-mobile.webp 1x, ./img/our-team/mobile/2x/Nikolas-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+
+                                <source srcset="./img/our-team/mobile/Nikolas-mobile.jpg 1x, ./img/our-team/mobile/2x/Nikolas-mobile@2x.jpg 2x" media="(min-width:320px)">
+
+                                <img src="./img/our-team/mobile/Nikolas-mobile.jpg" lang="en" alt="Фото нашего Marketing"
                             class="human__image">
+                            </picture>
                             <div class="human__info">
                                 <h3 class="human__title">
                                     Николай Тарасов
@@ -349,8 +426,22 @@
 
                     <li class="staff__item item">
                         <article class="human">
-                            <img src="./img/our-team/Michail.jpg" lang="en" alt="Фото нашего UI Designer"
+                            <picture>
+                                <source srcset="./img/our-team/desktop/Michail-desktop.webp 1x, ./img/our-team/desktop/2x/Michail-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp">
+
+                                <source srcset="./img/our-team/desktop/Michail-desktop.jpg 1x, ./img/our-team/desktop/2x/Michail-desktop@2x.jpg 2x" media="(min-width:1200px)">
+
+                                <source srcset="./img/our-team/tablet/Michail-tablet.webp 1x, ./img/our-team/tablet/2x/Michail-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp">
+
+                                <source srcset="./img/our-team/tablet/Michail-tablet.jpg 1x, ./img/our-team/tablet/2x/Michail-tablet@2x.jpg 2x" media="(min-width:768px)">
+
+                                <source srcset="./img/our-team/mobile/Michail-mobile.webp 1x, ./img/our-team/mobile/2x/Michail-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
+
+                                <source srcset="./img/our-team/mobile/Michail-mobile.jpg 1x, ./img/our-team/mobile/2x/Michail-mobile@2x.jpg 2x" media="(min-width:320px)">
+
+                                <img src="./img/our-team/mobile/Michail-mobile.jpg" lang="en" alt="Фото нашего UI Designer"
                             class="human__image">
+                            </picture>
                             <div class="human__info">
                                 <h3 class="human__title">
                                     Михаил Ермаков
@@ -383,15 +474,15 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- Постоянные клиенты -->
-        <section class="customer">
+        <!-- <section class="customer">
             <div class="customer__container container">
                 <h2 class="title">Постоянные клиенты</h2>
                 <ul class="grid list">
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-one">
-                            <svg class="customer__icon" width="44px" height="49px">
+                            <svg class="customer__icon" width="44" height="49">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-one"></use>
                             </svg>
                         </a>
@@ -399,7 +490,7 @@
 
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-two">
-                            <svg class="customer__icon" width="40px" height="52px">
+                            <svg class="customer__icon" width="40" height="52">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-two"></use>
                             </svg>
                         </a>
@@ -407,7 +498,7 @@
 
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-three">
-                            <svg class="customer__icon" width="41px" height="43px">
+                            <svg class="customer__icon" width="41" height="43">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-three"></use>
                             </svg>
                         </a>
@@ -415,7 +506,7 @@
 
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-four">
-                            <svg class="customer__icon" width="80px" height="42px">
+                            <svg class="customer__icon" width="80" height="42">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-four"></use>
                             </svg>
                         </a>
@@ -423,7 +514,7 @@
 
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-five">
-                            <svg class="customer__icon" width="59px" height="47px">
+                            <svg class="customer__icon" width="59" height="47">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-five"></use>
                             </svg>
                         </a>
@@ -431,17 +522,17 @@
 
                     <li class="customer__item item">
                         <a href="" class="customer__link customer__logo-six">
-                            <svg class="customer__icon" width="89px" height="45px">
+                            <svg class="customer__icon" width="89" height="45">
                                 <use href="./img/svg-icon/sprite.svg#icon-logo-six"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </main>
     <!-- Наш Футэр -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer__container container">
             <div class="location">
                 <div class="box-logo">
@@ -502,12 +593,13 @@
                 </form>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- ===========================JAVA-SCRIPT============================= -->
 
     <script src="./js/modal.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="./js/preloader.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 
     <!-- ===========================END JAVA-SCRIPT============================= -->
 
