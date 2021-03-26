@@ -3,4 +3,8 @@
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
+
+    @media screen and (max-width:767px) {
+        display: block;
+    }
 }

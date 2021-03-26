@@ -20,7 +20,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 528px;
     transform: translate(-50%, -50%);
     padding-top: 40px;
     padding-bottom: 40px;
@@ -44,9 +43,60 @@
         background: transparent;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 450px;
+        height: 95%;
+        max-height: 609px;
+        overflow: scroll;
+
+        &__title {
+            @include font(20px, 700, 30px);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 528px;
+        height: 100%;
+        max-height: 581px;
+
+        &__title {
+            @include font(20px, 700, 23px);
+        }
+    }
+
 }
 
 
+.at-start--accent {
+@media screen and (max-width: 767px) {
+    .form__input:focus & {
+        color: var(--accent-text-color);
+    }
+}
+}
+
+.at-start {
+    margin-bottom: 10px;
+
+    @include font(12px, 400, 14px);
+
+    letter-spacing: var(--form-letter-spacing);
+
+    color: var(--paragraph-text-color);
+
+    
+}
+
+.modal__title {
+    display: block;
+    text-align: center;
+
+    letter-spacing: var(--letter-spacing);
+
+    color: var(--primary-text-color);
+}
 
 .modal__cross {
     width: 11px;
@@ -58,17 +108,6 @@
     .modal__close-btn:focus & {
         fill: var(--accent-text-color);
     }
-}
-
-
-
-.modal__title {
-    @include font(20px, 700, 23px);
-
-    text-align: center;
-    letter-spacing: var(--letter-spacing);
-
-    color: var(--primary-text-color);
 }
 
 .modal__form {
@@ -99,18 +138,6 @@
         outline: none;
         border-color: var(--accent-text-color);
     }
-}
-
-
-
-.at-start {
-    margin-bottom: 10px;
-
-    @include font(12px, 400, 14px);
-
-    letter-spacing: var(--form-letter-spacing);
-
-    color: var(--paragraph-text-color);
 }
 
 .form__span-container {
@@ -180,6 +207,10 @@
     letter-spacing: var(--letter-spacing);
 
     color: var(--paragraph-text-color);
+
+    @media screen and (max-width:1199px) {
+            @include font(12px, 400, 14px);
+        }
 }
 
 .form__label-checkbox::before {
@@ -224,7 +255,12 @@
         width: 100%;
         height: 1px;
         background-color: var(--accent-text-color);
+
+        @media screen and (max-width: 1199px) {
+            bottom: 1px;
+        }
     }
+    
 }
 
 
