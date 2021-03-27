@@ -504,8 +504,8 @@ address {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.portfolio__item:hover .product__overlay,
-.portfolio__item:focus .product__overlay {
+.product__link:hover .product__overlay,
+.product__link:focus .product__overlay {
   transform: translateY(0);
 }
 
