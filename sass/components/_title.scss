@@ -8,4 +8,9 @@
 
     color: var(--primary-text-color);
 
+    @media screen and (max-width:1199px) {
+        margin-bottom: 30px;
+        
+        @include font(28px, 700, 33px);
+    }
 }

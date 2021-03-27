@@ -406,6 +406,15 @@ address {
   color: var(--primary-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.179;
+  }
+}
+
 .subtitle {
   font-size: 14px;
   font-weight: 700;
@@ -437,28 +446,38 @@ address {
   }
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-
 @media screen and (max-width: 767px) {
   .grid {
     display: block;
   }
 }
 
-.item {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+.item {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
   .item {
-    display: block;
+    display: flex;
+    align-items: stretch;
+    flex-basis: calc((100% -2 * 30px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item {
+    flex-basis: calc((100% -4 * 30px) / 4);
   }
 }
 
@@ -531,20 +550,28 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover, .social__link:focus {
-  background-color: var(--accent-text-color);
+@media screen and (min-width: 1200px) {
+  .social__link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social__link:hover, .social__link:focus {
+    background-color: var(--accent-text-color);
+  }
 }
 
 .social__link--greyer {
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link--greyer:hover, .social__link--greyer:focus {
-  background-color: var(--accent-text-color);
+@media screen and (min-width: 1200px) {
+  .social__link--greyer {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social__link--greyer:hover, .social__link--greyer:focus {
+    background-color: var(--accent-text-color);
+  }
 }
 
 .social__icon {
@@ -560,26 +587,58 @@ address {
   fill: var(--primary-background-color);
 }
 
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: var(--primary-background-color);
+@media screen and (min-width: 1200px) {
+  .social__link:hover .social__icon,
+  .social__link:focus .social__icon {
+    fill: var(--primary-background-color);
+  }
+}
+
+.sign-up {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .sign-up {
+    max-width: 450px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-up {
+    max-width: 570px;
+    justify-content: start;
+  }
 }
 
 .sign-up__subtitle {
-  display: block;
+  display: inline-block;
+  width: 100%;
+  max-width: 219px;
   margin-bottom: 20px;
 }
 
 .sign-up__form {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .sign-up__form {
+    max-width: 570px;
+  }
+}
+
 .sign-up__input {
-  display: inline-block;
-  width: 358px;
-  margin-right: 12px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -598,6 +657,20 @@ address {
 
 .sign-up__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199px) {
+  .sign-up__input {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-up__input {
+    max-width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .sign-up__button {
@@ -973,10 +1046,36 @@ address {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .port {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .port__list {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .port__list {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .port__list {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .port__list {
+    margin-bottom: 50px;
+  }
 }
 
 .port__button {
@@ -1008,20 +1107,50 @@ address {
   color: var(--primary-background-color);
 }
 
-.port__item:not(:first-child) {
-  margin-left: 8px;
+.port__item {
+  outline: 1px solid red;
+}
+
+.port__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .port__item:nth-child(-n +3) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__item {
-  flex-basis: calc(100% / 3 - 30px);
   background-color: var(--primary-background-color);
-  max-width: 370px;
+  max-width: 450px;
   max-height: 404px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio__item:hover, .portfolio__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    max-width: 354px;
+    max-height: 440px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    flex-basis: calc((100% -3 * 30px) / 3);
+    max-width: 370px;
+    max-height: 404px;
+  }
 }
 
 .footer {
@@ -1035,8 +1164,38 @@ address {
   align-items: baseline;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .location {
-  margin-right: 70px;
+  max-width: 231px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .location {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .location {
+    margin-right: 70px;
+    text-align: start;
+  }
 }
 
 .box-logo {
@@ -1055,13 +1214,25 @@ address {
 }
 
 .footer__city {
-  display: block;
-  width: 231px;
   color: var(--primary-background-color);
 }
 
 .join {
-  margin-right: 93px;
+  max-width: 206px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .join {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-right: 93px;
+  }
 }
 
 .join__subtitle {

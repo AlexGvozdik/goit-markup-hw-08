@@ -1,18 +1,44 @@
+.sign-up {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    
+    @media screen and (max-width:1199px) {
+        max-width: 450px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width:570px;
+        justify-content: start;
+
+    }
+}
+
 .sign-up__subtitle {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    max-width:219px;
     margin-bottom: 20px;
 }
 
 .sign-up__form {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width:1200px) {
+        max-width: 570px;
+    }
+
 }
 
 .sign-up__input {
-    display: inline-block;
-    width: 358px;
-    margin-right: 12px;
+    width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
@@ -31,6 +57,16 @@
 
     &::placeholder {
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (max-width: 1199px) {
+        max-width: 450px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 358px;
+        margin-right: 12px;
     }
 }
 

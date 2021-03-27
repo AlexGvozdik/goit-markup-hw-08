@@ -71,7 +71,7 @@
 
 .at-start--accent {
 @media screen and (max-width: 767px) {
-    .form__input:focus & {
+    .at-start:focus-within & {
         color: var(--accent-text-color);
     }
 }
