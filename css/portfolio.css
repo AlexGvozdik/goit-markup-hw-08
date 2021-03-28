@@ -484,6 +484,16 @@ address {
   overflow: hidden;
 }
 
+.product__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product__link:hover, .product__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .product__overlay {
   position: absolute;
   top: 0;
@@ -511,6 +521,7 @@ address {
 
 .product__content {
   padding: 20px 24px;
+  flex-grow: 1;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -1105,10 +1116,6 @@ address {
   color: var(--primary-background-color);
 }
 
-.port__item {
-  outline: 1px solid red;
-}
-
 .port__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1124,10 +1131,6 @@ address {
   max-width: 450px;
   max-height: 404px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio__item:hover, .portfolio__item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (max-width: 767px) {

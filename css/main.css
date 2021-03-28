@@ -1376,7 +1376,6 @@ address {
 }
 
 .features__item {
-  outline: 1px solid black;
   max-width: 450px;
   max-height: 220px;
 }
@@ -1512,7 +1511,6 @@ address {
 }
 
 .staff__item {
-  outline: 1px solid black;
   max-width: 450px;
   max-height: 622px;
   border-radius: 0px 0px 4px 4px;
