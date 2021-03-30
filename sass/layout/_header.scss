@@ -1,5 +1,6 @@
 
 .header {
+    border-bottom: 1px solid #ececec;
     &__container {
     display: flex;
     align-items: center;
@@ -10,7 +11,12 @@
     }
 }
 
-
+@media screen and (max-width:479px) {
+    .mobile-menu__social {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 @media screen and (max-width:767px) {
     .header {
@@ -47,12 +53,11 @@
     }
 
     .mobile-menu {
-        position: absolute;
+        position: fixed;
         display: none;
         flex-direction: column;
-        width: 100%;
-        max-width: 480px;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
 
         padding-top: 48px;
         padding-bottom: 48px;
@@ -105,10 +110,14 @@
         }
 
         &link-contact {
-        @include font(24px, 500, 28px);
+            @include font(24px, 500, 28px);
         
-        color: var(--paragraph-text-color);
-        letter-spacing: var(main-links-letter-spacing);
+            color: var(--paragraph-text-color);
+            letter-spacing: var(main-links-letter-spacing);
+
+        &--bigger {
+            @include font(34px, 500, 40px);
+            }
 
         &:hover,
         &:focus {
@@ -151,7 +160,6 @@
     .header {
         padding-top: 23px;
         padding-bottom: 21px;
-        border-bottom: 1px solid #ececec;
         &__nav {
             display: flex;
             align-items: center;
